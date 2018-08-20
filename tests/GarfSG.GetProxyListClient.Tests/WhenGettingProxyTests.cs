@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using GarfSG.GetProxyListClient.Tests.Properties;
 using Newtonsoft.Json;
-using Xunit;
+using Xunit;    
 
 namespace GarfSG.GetProxyListClient.Tests
 {
