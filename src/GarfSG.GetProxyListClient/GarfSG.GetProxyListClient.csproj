@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Simple C#/.Net Standard wrapper for https://getproxylist.com/ API</Description>
+    <Copyright>Szymon Gaertig</Copyright>
+    <PackageProjectUrl>https://github.com/garfieldos/GetProxyListClient</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/garfieldos/GetProxyListClient</RepositoryUrl>
+    <PackageTags>GetProxyList.com, GetProxyListClient</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
