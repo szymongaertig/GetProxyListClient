@@ -1,2 +1,2 @@
 # GetProxyListClient
-Simple wrapper for https://getproxylist.com/ API
+Simple C#/.Net Standard wrapper for https://getproxylist.com/ API
