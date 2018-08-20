@@ -13,13 +13,10 @@ namespace GarfSG.GetProxyListClient
         {
             try
             {
-                var httpClient = _baseApiUrl
-                    .AppendPathSegment("proxy");
-
-                _baseApiUrl.SetQueryParams(criteria);
-
-                return await httpClient.GetJsonAsync<GetProxyResult>();
-
+                return await _baseApiUrl
+                    .AppendPathSegment("proxy")
+                    .SetQueryParams(criteria.GetQueryParamsObject())
+                    .GetJsonAsync<GetProxyResult>();
             }
             catch (FlurlHttpException ex)
             {

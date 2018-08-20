@@ -8,6 +8,7 @@
     <PackageProjectUrl>https://github.com/garfieldos/GetProxyListClient</PackageProjectUrl>
     <RepositoryUrl>https://github.com/garfieldos/GetProxyListClient</RepositoryUrl>
     <PackageTags>GetProxyList.com, GetProxyListClient</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

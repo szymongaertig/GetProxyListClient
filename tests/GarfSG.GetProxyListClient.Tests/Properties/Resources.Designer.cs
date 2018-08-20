@@ -82,9 +82,9 @@ namespace GarfSG.GetProxyListClient.Tests.Properties {
         ///    &quot;downloadSpeed&quot;: &quot;17.000&quot;,
         ///    &quot;seconds [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string ValidGetProxyResponse {
+        internal static string ValidGetProxyResponse1 {
             get {
-                return ResourceManager.GetString("ValidGetProxyResponse", resourceCulture);
+                return ResourceManager.GetString("ValidGetProxyResponse1", resourceCulture);
             }
         }
     }

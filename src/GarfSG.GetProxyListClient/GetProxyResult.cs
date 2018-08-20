@@ -8,6 +8,7 @@ namespace GarfSG.GetProxyListClient
     {
         public string Ip { get; set; }
         public int Port { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
         public ProtocolEnum Protocol { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]

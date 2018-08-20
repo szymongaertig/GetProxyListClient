@@ -34,7 +34,7 @@ namespace GarfSG.GetProxyListClient.Tests
             using (var fixture = new GetSearchListClientTestsFixture())
             {
                 // Given
-                var jsonObject = JsonConvert.DeserializeObject(Resources.ValidGetProxyResponse);
+                var jsonObject = JsonConvert.DeserializeObject(Resources.ValidGetProxyResponse1);
                 fixture.FlurlHttpTest.RespondWithJson(jsonObject, 200);
 
                 // When

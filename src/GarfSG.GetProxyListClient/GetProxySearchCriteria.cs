@@ -1,4 +1,6 @@
-﻿namespace GarfSG.GetProxyListClient
+﻿using Newtonsoft.Json;
+
+namespace GarfSG.GetProxyListClient
 {
     /// <summary>
     ///     https://getproxylist.com/#the-api
