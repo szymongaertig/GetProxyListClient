@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/nhq4kqtgkgofkgn8?svg=true)](https://ci.appveyor.com/project/garfieldos/getproxylistclient)
+
 # GarfSG.GetProxyListClient
 Simple C#/.Net Standard wrapper for https://getproxylist.com/ API
 
