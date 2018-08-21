@@ -13,5 +13,5 @@ build:
   verbosity: minimal
 
 test_script:
-  - cmd: dotnet test
+  - cmd: dotnet test tests/GarfSG.GetProxyListClient.Tests/GarfSG.GetProxyListClient.Tests.csproj
   
