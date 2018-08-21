@@ -1,0 +1,8 @@
+configuration: Release
+
+before build:
+  - nuget restore
+  
+ build:
+  verbocity: minimal
+  
