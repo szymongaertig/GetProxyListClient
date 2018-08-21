@@ -3,6 +3,6 @@ configuration: Release
 before build:
   - nuget restore
   
- build:
+build:
   verbocity: minimal
   
