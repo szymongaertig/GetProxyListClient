@@ -4,7 +4,7 @@ version: '1.0.{build}'
 
 dotnet_csproj:
     patch: true
-    file: src/GarfSG.GetProxyListClient/GarfSG.GetProxyListClient.csproj
+    file: src\GarfSG.GetProxyListClient\GarfSG.GetProxyListClient.csproj
     version: '{version}'
     
 before_build:
@@ -18,5 +18,5 @@ build:
   verbosity: minimal
 
 test_script:
-  - cmd: dotnet test tests/GarfSG.GetProxyListClient.Tests/GarfSG.GetProxyListClient.Tests.csproj
+  - cmd: dotnet test tests\GarfSG.GetProxyListClient.Tests\GarfSG.GetProxyListClient.Tests.csproj
   
