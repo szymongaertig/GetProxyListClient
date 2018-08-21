@@ -20,3 +20,10 @@ build:
 test_script:
   - cmd: dotnet test tests\GarfSG.GetProxyListClient.Tests\GarfSG.GetProxyListClient.Tests.csproj
   
+deploy:
+  provider: NuGet
+  api_key:
+    secure: rdQj1p4P/h/Gpa8wLLrop6rLzzoBWGqMR2CV/viIq/r+LKRS2boB/wV+lqITrbBR
+  skip_symbols: false
+  artifact: /.*\.nupkg/
+  
