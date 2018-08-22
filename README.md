@@ -11,9 +11,8 @@ PM> Install-Package GarfSg.GetProxyListClient
 ## Usage
 ```
 var apiKey = "apiKeyFromGetProxyListCom";
-var proxyData = new GetProxyListClient().GetProxy(new GetProxySearchCriteria
+var proxyData = new GetProxyListClient(apiKey).GetProxy(new GetProxySearchCriteria
                 {
-                    ApiKey = apiKey,
                     AllowsHttps = true,
                     Protocol = new[] { ProtocolEnum.Http }
                 });
