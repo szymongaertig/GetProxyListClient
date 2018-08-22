@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using GarfSG.GetProxyListClient.Model;
 
 namespace GarfSG.GetProxyListClient
 {

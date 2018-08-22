@@ -1,4 +1,4 @@
-﻿namespace GarfSG.GetProxyListClient
+﻿namespace GarfSG.GetProxyListClient.Model
 {
     public class ErrorResult
     {

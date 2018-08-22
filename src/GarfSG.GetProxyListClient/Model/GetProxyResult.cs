@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace GarfSG.GetProxyListClient
+namespace GarfSG.GetProxyListClient.Model
 {
     public class GetProxyResult
     {

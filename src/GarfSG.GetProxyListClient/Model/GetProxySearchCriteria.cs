@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace GarfSG.GetProxyListClient
+﻿namespace GarfSG.GetProxyListClient.Model
 {
     /// <summary>
     ///     https://getproxylist.com/#the-api
@@ -71,11 +69,6 @@ namespace GarfSG.GetProxyListClient
         ///     The IP
         /// </summary>
         public string[] Ip { get; set; }
-
-        /// <summary>
-        ///     optional, removes daily limits
-        /// </summary>
-        public string ApiKey { get; set; }
 
         /// <summary>
         ///     Seconds to establish connection

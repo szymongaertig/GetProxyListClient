@@ -1,4 +1,4 @@
-﻿namespace GarfSG.GetProxyListClient
+﻿namespace GarfSG.GetProxyListClient.Model
 {
     public static class GetProxySearchCriteriaExtensions
     {
@@ -19,7 +19,6 @@
                 country = value.Country,
                 notCountry = value.NotCountry,
                 ip = value.Ip,
-                apiKey = value.ApiKey,
                 maxConnectTime = value.MaxConnectTime,
                 maxSecondsToFirstByte = value.MaxSecondsToFirstByte,
                 minDownloadSpeed = value.MinDownloadSpeed,

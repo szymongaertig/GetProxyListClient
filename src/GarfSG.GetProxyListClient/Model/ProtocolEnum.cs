@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace GarfSG.GetProxyListClient
+namespace GarfSG.GetProxyListClient.Model
 {
     public enum ProtocolEnum
     {

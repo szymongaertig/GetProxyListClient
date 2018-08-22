@@ -1,13 +1,56 @@
 ﻿using System;
 using System.Threading.Tasks;
+using AutoFixture.Xunit2;
+using GarfSG.GetProxyListClient.Exceptions;
+using GarfSG.GetProxyListClient.Model;
 using GarfSG.GetProxyListClient.Tests.Properties;
 using Newtonsoft.Json;
-using Xunit;    
+using Xunit;
 
 namespace GarfSG.GetProxyListClient.Tests
 {
     public class WhenGettingProxyTests
     {
+        [Theory]
+        [AutoData]
+        public async Task With_Invalid_ApiKey_Then_Throw_Proper_Exception(string apiKey)
+        {
+            using (var fixture = new GetSearchListClientTestsFixture(apiKey))
+            {
+                // Given
+                fixture.FlurlHttpTest.RespondWithJson(new
+                {
+                    error = ErrorMesssages.InvalidApiKey
+                }, 401);
+
+                // When, Then
+                await Assert.ThrowsAsync<InvalidApiKeyException>(async () =>
+                {
+                    await fixture.Sut.GetProxy(new GetProxySearchCriteria());
+                });
+            }
+        }
+
+        [Theory]
+        [AutoData]
+        public async Task With_Expired_ApiKey_Then_Throw_Proper_Exception(string apiKey)
+        {
+            using (var fixture = new GetSearchListClientTestsFixture(apiKey))
+            {
+                // Given
+                fixture.FlurlHttpTest.RespondWithJson(new
+                {
+                    error = ErrorMesssages.ExpiredApiKey
+                }, 401);
+
+                // When, Then
+                await Assert.ThrowsAsync<ExpiredApiKeyException>(async () =>
+                {
+                    await fixture.Sut.GetProxy(new GetProxySearchCriteria());
+                });
+            }
+        }
+
         [Theory]
         [InlineData(304, "lerem ipsum")]
         [InlineData(400, "Some error message")]
@@ -15,10 +58,13 @@ namespace GarfSG.GetProxyListClient.Tests
             int errorCode,
             string errorMessage)
         {
-            using (var fixture = new GetSearchListClientTestsFixture())
+            using (var fixture = new GetSearchListClientTestsFixture(null))
             {
                 // Given
-                fixture.FlurlHttpTest.RespondWithJson(new { error = errorMessage }, errorCode);
+                fixture.FlurlHttpTest.RespondWithJson(new
+                {
+                    error = errorMessage
+                }, errorCode);
 
                 // When, Then
                 var exception = await Assert.ThrowsAsync<Exception>(
@@ -31,7 +77,7 @@ namespace GarfSG.GetProxyListClient.Tests
         [Fact]
         public async Task With_200OK_Result_Then_Returns_Valid_Object()
         {
-            using (var fixture = new GetSearchListClientTestsFixture())
+            using (var fixture = new GetSearchListClientTestsFixture(null))
             {
                 // Given
                 var jsonObject = JsonConvert.DeserializeObject(Resources.ValidGetProxyResponse1);

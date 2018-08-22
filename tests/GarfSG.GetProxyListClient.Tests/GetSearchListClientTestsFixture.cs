@@ -8,10 +8,10 @@ namespace GarfSG.GetProxyListClient.Tests
         public GetProxyListClient Sut { get; set; }
 
         public HttpTest FlurlHttpTest { get; set; }
-        public GetSearchListClientTestsFixture()
+        public GetSearchListClientTestsFixture(string apiKey)
         {
             FlurlHttpTest = new HttpTest();
-            Sut = new GetProxyListClient();
+            Sut = new GetProxyListClient(apiKey);
         }
 
         public void Dispose()
